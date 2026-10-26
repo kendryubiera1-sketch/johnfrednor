@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Aromas Art: más de 300 fragancias de inspiración para hombre y mujer. Elige tu tamaño, arma tu carrito y haz tu pedido por WhatsApp.">
+<meta property="og:type" content="website"><meta property="og:title" content="Aromas Art — Fragancias de inspiración"><meta property="og:description" content="Fragancias para él y para ella en 10, 15, 20, 30, 50 y 100 ml. Pide por WhatsApp.">
+<meta property="og:image" content="https://kendryubiera1-sketch.github.io/aromasart/og.jpg"><meta property="og:url" content="https://kendryubiera1-sketch.github.io/aromasart/"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23080808'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='%23ffcf6b' font-family='Georgia,serif'%3EA%3C/text%3E%3C/svg%3E">
+<title>Aromas Art — Catálogo de perfumes de inspiración</title>
+<style>
+:root{--bg:#080808;--card:#131212;--line:#2e2a2a;--gold:#ffcf6b;--gold-d:#c9973a;--red:#e11d2e;--red-d:#b90e1d;--text:#fff;--muted:#b9b3b0;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px;overflow-x:clip}
+body{margin:0;background:radial-gradient(ellipse 80% 40% at 50% 0,#2a0a0e 0,#0a0808 55%,#050505 100%) fixed;color:var(--text);font:16px/1.65 var(--sans);overflow-x:clip;padding-left:env(safe-area-inset-left,0);padding-right:env(safe-area-inset-right,0)}
+body:has(dialog[open]){overflow:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0}
+a{color:var(--gold)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+
+/* barra superior y cabecera */
+.ann{background:linear-gradient(90deg,#5c0f18,var(--red-d) 50%,#5c0f18);color:#fff;text-align:center;font-size:13px;padding:7px 12px;padding-top:calc(7px + env(safe-area-inset-top,0px))}
+header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.78);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid rgba(255,207,107,.16)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px}
+.brand{font-family:var(--serif);font-size:27px;color:#fff;font-weight:700;text-decoration:none;letter-spacing:.5px}
+.brand span{color:var(--red)}
+.tools{display:flex;gap:8px;align-items:center}
+.ibtn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border-radius:999px;background:none;border:1px solid rgba(255,207,107,.35);color:var(--gold);text-decoration:none;transition:background .25s,border-color .25s,color .25s}
+.ibtn:hover{background:rgba(225,29,46,.16);border-color:var(--red);color:#fff}
+.ibtn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ibtn.cart{background:linear-gradient(135deg,#f22b3d,var(--red-d));border-color:#f34b59;color:#fff;font-weight:600;padding:0 16px}
+.ibtn.cart:hover{box-shadow:0 0 22px rgba(225,29,46,.55)}
+#cartCount{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--gold);color:#1a1000;font-size:12px;font-weight:800}
+#cartCount.bump{animation:bump .45s var(--ease)}
+@keyframes bump{40%{transform:scale(1.5)}}
+nav{display:flex;gap:26px;overflow-x:auto;padding:0 0 11px;scrollbar-width:none;justify-content:center}
+nav::-webkit-scrollbar{display:none}
+nav a{position:relative;color:#eee;text-decoration:none;font-size:14px;white-space:nowrap;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s var(--ease)}
+nav a:hover{color:var(--gold)}nav a:hover::after{transform:scaleX(1)}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 26px;border-radius:999px;border:1px solid rgba(255,207,107,.5);background:none;color:var(--gold);text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-1px);background:rgba(255,207,107,.08)}
+.btn.gold,.add{background:linear-gradient(135deg,#f22b3d,var(--red-d));color:#fff;border-color:#f34b59}
+.btn.gold:hover,.add:hover:not(:disabled){box-shadow:0 6px 24px rgba(225,29,46,.45);background:linear-gradient(135deg,#ff3a4c,#c4101f)}
+.btn.amber{background:linear-gradient(135deg,var(--gold),#e08a00);color:#1a1000;border-color:#ffe3a0}
+.btn.amber:hover{background:linear-gradient(135deg,#ffdb8a,#eb9610);box-shadow:0 6px 24px rgba(255,207,107,.35)}
+.btn.sm{min-height:42px;padding:8px 18px;font-size:14px}
+
+/* hero */
+.hero{display:grid;gap:30px;padding:54px 0 40px;align-items:center}
+.hero h1{font-size:clamp(42px,8vw,78px);line-height:1.04;letter-spacing:-1px;background:linear-gradient(95deg,#ffcf6b,#fff1c9 45%,#ffcf6b 75%,#e08a00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:500px;font-size:17px;margin:18px 0 0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.stage{position:relative;justify-self:center;width:min(300px,70%)}
+.stage::before{content:"";position:absolute;inset:-12% -18%;background:radial-gradient(closest-side,rgba(225,29,46,.38),transparent 70%);filter:blur(6px)}
+.stage svg{position:relative;display:block;width:100%;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6))}
+
+/* franja de confianza */
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:6px 0 10px}
+.strip div{display:flex;align-items:center;gap:12px;padding:16px 18px;background:#0e0c0c;font-size:14px;color:#e6dfd9}
+.strip svg{flex:none;width:26px;height:26px;fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 6px}
+.quick a{display:block;padding:24px 14px;border:1px solid rgba(255,207,107,.22);border-radius:16px;color:var(--text);text-decoration:none;text-align:center;background:linear-gradient(155deg,#1a1212,#0d0b0b);transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.quick a:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 10px 30px rgba(225,29,46,.25)}
+.quick b{display:block;font-family:var(--serif);font-size:22px;font-weight:500;color:var(--gold)}
+.quick small{color:var(--muted)}
+
+section{padding:54px 0}
+.heading{margin-bottom:26px}
+.heading h2{font-size:clamp(30px,5vw,42px);background:linear-gradient(90deg,#ffcf6b,#fff1c9 60%,#ffcf6b);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.heading::after{content:"";display:block;width:64px;height:3px;margin-top:10px;border-radius:3px;background:linear-gradient(90deg,var(--red),var(--gold))}
+.heading p{margin:10px 0 0;color:var(--muted);max-width:620px}
+
+/* filtros */
+.controls{display:grid;gap:10px;margin:16px 0}
+input,select{width:100%;min-height:48px;padding:11px 14px;border-radius:12px;background:#0f0d0d;color:var(--text);border:1px solid #3a3030;font:inherit;transition:border-color .2s,box-shadow .2s}
+input:hover,select:hover{border-color:rgba(255,207,107,.5)}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,207,107,.15);outline:none}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:9px 18px;border-radius:999px;background:none;color:var(--text);border:1px solid #4a3a36;min-height:42px;transition:background .2s,border-color .2s,color .2s}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.on,.opts button.on{background:var(--red);color:#fff;border-color:var(--red);font-weight:700}
+.counter{color:var(--gold);margin:16px 0 8px;font-size:14px}
+
+/* tarjetas */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:linear-gradient(160deg,#1b1414,#0c0a0a);border:1px solid rgba(255,207,107,.16);border-radius:18px;padding:12px;min-width:0;box-shadow:0 2px 14px rgba(0,0,0,.45);transition:transform .35s var(--ease),border-color .3s,box-shadow .35s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,207,107,.6);box-shadow:0 14px 34px rgba(225,29,46,.28),0 0 0 1px rgba(255,207,107,.15)}
+.img{position:relative;aspect-ratio:1/1;background:#fff;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.img img{width:100%;height:100%;object-fit:contain;padding:6px;transition:transform .5s var(--ease)}
+.card:hover .img img{transform:scale(1.06)}
+.fb{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;background:linear-gradient(160deg,#241214,#0e0b0b);color:var(--gold);font-family:var(--serif)}
+.fb small{color:var(--muted);font:12px var(--sans);margin-top:6px}
+.tag{position:absolute;top:9px;left:9px;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:700}
+.tag.new{background:var(--red);color:#fff}.tag.stock{background:#1c1508;color:var(--gold);border:1px solid var(--gold-d)}.tag.out{background:#2a2a2a;color:#bbb}
+.cat{font-size:12px;margin-top:14px;font-weight:600}.cat.m{color:var(--gold)}.cat.f{color:#ff737d}
+.card h3{font-size:19px;line-height:1.25;margin:2px 0}
+.brand-name{font-size:13px;color:var(--muted);margin:0 0 6px}
+.fam,.notes{font-size:13px;margin:2px 0;color:#f2e2bd}.notes b{font-weight:700;color:var(--gold)}
+.why{font-size:13px;margin:8px 0 0;color:#f2e2bd;border-left:2px solid var(--red);padding-left:9px}
+.pr{margin:auto 0 10px;padding-top:12px}
+.add{width:100%;min-height:46px;padding:10px;border-radius:12px;font-weight:700;border:1px solid #f34b59;transition:box-shadow .25s,background .25s,transform .15s}
+.add:active:not(:disabled){transform:scale(.97)}
+.add:disabled{background:#2a2a2a;border-color:#3a3a3a;color:#888;cursor:not-allowed}
+.more{display:block;margin:30px auto 0}
+.empty{text-align:center;color:var(--muted);padding:36px}
+
+/* secciones de confianza */
+.feat{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.box{padding:22px;border:1px solid rgba(255,207,107,.2);border-top:3px solid var(--gold);border-radius:16px;background:linear-gradient(160deg,#1a1313,#0e0b0b)}
+.box h3{font-size:21px;color:var(--gold);margin-bottom:8px}.box p,.box ul{margin:0;color:#d6cfca;font-size:15px}.box ul{padding-left:18px}
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:#ddd5cf}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font:600 20px var(--serif);margin-bottom:12px}
+.quiz{display:grid;gap:20px;max-width:760px}
+.qg h4{margin:0 0 10px;font-weight:600;color:var(--gold)}
+.opts{display:flex;gap:8px;flex-wrap:wrap}.opts button{padding:9px 18px;border-radius:999px;background:none;color:var(--text);border:1px solid #4a3a36;min-height:42px;transition:border-color .2s,color .2s}
+.opts button:hover{border-color:var(--gold);color:var(--gold)}.opts button.on:hover{color:#fff}
+.note{color:var(--muted);font-size:13px;line-height:1.55}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+details{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--card);margin-bottom:10px;transition:border-color .25s}
+details[open],details:hover{border-color:rgba(255,207,107,.45)}
+summary{cursor:pointer;font-weight:600;color:#fff}details[open] summary{color:var(--gold)}details p{margin:10px 0 0;color:#d6cfca}
+.contact{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:30px;border:1px solid rgba(255,207,107,.3);border-radius:20px;background:linear-gradient(135deg,#2a0a0e,#0d0909 70%)}
+.contact h3{font-size:26px;color:var(--gold)}.contact p{margin:6px 0 0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:34px 0 50px;color:var(--muted);font-size:14px;text-align:center}
+footer b{font-family:var(--serif);font-size:20px;color:#fff;font-weight:700}
+
+/* WhatsApp flotante */
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15;display:flex;align-items:center;gap:9px;padding:0 20px 0 14px;border-radius:999px;background:linear-gradient(135deg,#f22b3d,var(--red-d));color:#fff;border:1px solid #ff6a77;text-decoration:none;font-size:15px;font-weight:700;min-height:52px;box-shadow:0 8px 26px rgba(225,29,46,.5);transition:transform .25s var(--ease),box-shadow .25s}
+.wa:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 12px 32px rgba(225,29,46,.7)}
+.wa svg{width:26px;height:26px;fill:#fff}
+@media(prefers-reduced-motion:no-preference){.wa::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:2px solid var(--red);animation:ping 2.8s ease-out infinite;pointer-events:none}}
+@keyframes ping{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(1.35)}}
+
+#toast{position:fixed;left:50%;top:calc(84px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:60;background:var(--gold);color:#1a1000;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;max-width:90vw;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
+
+/* diálogos y carrito lateral */
+dialog{width:calc(100% - 28px);max-width:520px;background:#0f0c0c;color:var(--text);border:1px solid rgba(255,207,107,.4);border-radius:18px;padding:24px}
+dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(3px)}
+dialog h3{font-size:25px;margin-bottom:12px;color:var(--gold)}
+#cartDlg{margin:0 0 0 auto;width:min(440px,100%);max-width:none;height:100%;max-height:100%;border-radius:0;border-width:0 0 0 1px;padding:calc(22px + env(safe-area-inset-top,0px)) 22px calc(22px + env(safe-area-inset-bottom,0px));overflow-y:auto}
+#cartDlg[open]{animation:slide .35s var(--ease)}
+@keyframes slide{from{transform:translateX(100%)}}
+.dh{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.dh h3{margin:0}
+.x{width:44px;height:44px;border-radius:50%;background:none;border:1px solid #4a3a36;color:var(--gold);font-size:22px;line-height:1}
+.x:hover{border-color:var(--gold)}
+.ci{display:grid;grid-template-columns:1fr auto;gap:8px 12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+.qty{display:inline-flex;align-items:center;gap:6px}
+.qty button,.rm{min-width:40px;min-height:40px;border-radius:10px;background:#1d1717;color:var(--text);border:1px solid #4a3a36}
+.qty button:hover{border-color:var(--gold)}
+.rm{background:none;border:0;color:#e9a0a6;min-width:auto;padding:0 8px;text-decoration:underline}
+.tot{display:flex;justify-content:space-between;align-items:baseline;margin:16px 0;font-size:17px}.tot b{font-family:var(--serif);font-size:28px;color:var(--gold);font-weight:600}
+.form{display:grid;gap:10px;margin-top:6px}.form label{font-size:14px;color:var(--muted)}
+.dsec{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.dsec h4{margin:0 0 4px;font:600 17px var(--serif);color:var(--gold)}
+.err{color:#ff9aa2;font-size:13px;margin:2px 0 0}
+.rl{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+
+.tag.off{left:auto;right:9px;background:linear-gradient(135deg,var(--gold),#e08a00);color:#1a1000}
+.deal{font-size:13px;color:var(--gold);margin:6px 0 0;font-weight:600}
+nav a[hidden]{display:none}
+.draft{background:var(--gold);color:#1a1000;text-align:center;font-size:13px;font-weight:600;padding:6px 12px}
+.draft button{background:none;border:0;color:#7d1b25;text-decoration:underline;font-weight:700;padding:0 4px;min-height:32px}
+textarea{width:100%;padding:11px 14px;border-radius:12px;background:#0f0d0d;color:var(--text);border:1px solid #3a3030;font:12px/1.5 ui-monospace,Menlo,Consolas,monospace;resize:vertical;margin-bottom:10px}
+#adm{max-width:640px;max-height:calc(100% - 28px);overflow-y:auto}
+.admform{grid-template-columns:1fr 1fr}.admform .w{grid-column:1/-1}.admform p{margin:0}
+@media(max-width:560px){.admform{grid-template-columns:1fr}}
+@media(min-width:700px){.controls{grid-template-columns:1.4fr 1fr 1fr 1fr}.hero{grid-template-columns:1.25fr .75fr;padding-top:84px}.strip{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:699px){nav{justify-content:flex-start}.ibtn.cart span.l{display:none}}
+@media(max-width:480px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:9px}.card h3{font-size:15px}.quick{gap:8px}.quick a{padding:16px 6px}.quick b{font-size:17px}.brand{font-size:23px}.wa span{display:none}.wa{padding:0 13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="ann">Pedidos por WhatsApp · Más de 300 fragancias de inspiración</div>
+<div class="draft" id="draftBar" hidden>Vista previa: tienes ofertas sin publicar. <button type="button" id="draftOpen">Abrir administrador</button></div>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="#inicio">Aromas <span>Art</span></a>
+      <div class="tools">
+        <a class="ibtn" href="#catalogo" id="searchGo" aria-label="Buscar perfumes"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+        <button class="ibtn cart" id="cartTop" type="button" aria-label="Abrir carrito"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="l">Carrito</span><span id="cartCount">0</span></button>
+      </div>
+    </div>
+    <nav aria-label="Secciones"><a href="#ofertas" id="navOfertas" hidden>Ofertas</a><a href="#catalogo">Catálogo</a><a href="#buscador">Descubre tu aroma</a><a href="#como-comprar">Cómo comprar</a><a href="#confianza">Compra con confianza</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></nav>
+  </div>
+</header>
+<main id="inicio">
+  <div class="wrap hero">
+    <div>
+      <h1>Tu aroma, tu esencia, tu estilo.</h1>
+      <p>En Aromas Art encuentras fragancias de inspiración para él y para ella. Elige tu tamaño, arma tu carrito y envía tu pedido por WhatsApp.</p>
+      <div class="cta"><a class="btn gold" href="#catalogo">Explorar catálogo</a><a class="btn amber" href="#buscador">Descubrir mi aroma</a><a class="btn" id="waHero" href="#contacto" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>
+    </div>
+    <div class="stage"><svg viewBox="0 0 200 280" role="img" aria-label="Ilustración de un frasco de perfume"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffcf6b"/><stop offset="1" stop-color="#e11d2e"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a0a0e"/><stop offset="1" stop-color="#0a0405"/></linearGradient></defs><rect x="82" y="14" width="36" height="40" rx="6" fill="url(#g)"/><rect x="92" y="54" width="16" height="14" fill="#7d1b25"/><rect x="30" y="68" width="140" height="200" rx="26" fill="url(#b)" stroke="url(#g)" stroke-width="3"/><rect x="48" y="130" width="104" height="70" rx="8" fill="none" stroke="#ffcf6b" stroke-opacity=".6" stroke-width="1"/><text x="100" y="172" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#ffcf6b">Aromas Art</text><path d="M46 96c0 0 8-12 20-12" stroke="#ffcf6b" stroke-opacity=".6" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div>
+  </div>
+  <div class="wrap">
+    <div class="strip">
+      <div><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z"/></svg>Pedido sencillo por WhatsApp</div>
+      <div><svg viewBox="0 0 24 24"><path d="M9 3h6v3H9zM8 6h8l2 4v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V10l2-4Z"/></svg>6 tamaños, de 10 a 100 ml</div>
+      <div><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg>Confirmamos disponibilidad</div>
+      <div><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7L12 3Z"/></svg>Fragancias para él y para ella</div>
+    </div>
+    <div class="quick">
+      <a href="#catalogo" data-go="m"><b>Masculinos</b><small id="cm"></small></a>
+      <a href="#catalogo" data-go="f"><b>Femeninos</b><small id="cf"></small></a>
+      <a href="#catalogo" data-go="ar"><b>Fragancias árabes</b><small id="ca"></small></a>
+    </div>
+  </div>
+
+  <section id="ofertas" class="wrap" hidden>
+    <div class="heading"><h2>Ofertas</h2><p>Precios especiales por tiempo limitado.</p></div>
+    <div class="grid" id="offGrid"></div>
+    <button class="btn more" data-go="oferta" type="button">Ver todas las ofertas</button>
+  </section>
+
+  <section id="catalogo" class="wrap">
+    <div class="heading"><h2>Catálogo completo</h2><p>Busca por nombre o marca de referencia, o filtra por categoría y familia olfativa.</p></div>
+    <div class="chips" role="group" aria-label="Categoría"><button class="chip on" data-cat="todos">Todos</button><button class="chip" data-cat="m">Masculinos</button><button class="chip" data-cat="f">Femeninos</button><button class="chip" data-cat="ar">Árabes</button><button class="chip" data-cat="nuevo">Novedades</button><button class="chip" data-cat="oferta" id="chipOferta" hidden>Ofertas</button></div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Buscar perfume o marca" aria-label="Buscar perfume o marca" autocomplete="off">
+      <select id="brand" aria-label="Marca"><option value="">Todas las marcas</option></select>
+      <select id="famsel" aria-label="Familia olfativa"><option value="">Todas las familias</option><option value="D">Dulce</option><option value="F">Fresco</option><option value="R">Frutal</option><option value="L">Floral</option><option value="I">Intenso</option></select>
+      <select id="sort" aria-label="Ordenar"><option value="cat">Orden del catálogo</option><option value="new">Novedades primero</option><option value="az">Nombre A–Z</option><option value="za">Nombre Z–A</option></select>
+    </div>
+    <div class="counter" id="counter" aria-live="polite"></div>
+    <div class="grid" id="grid"></div>
+    <button class="btn more" id="more" type="button" hidden>Mostrar más perfumes</button>
+    <div class="empty" id="empty" hidden>No encontramos ese perfume. Prueba con otro nombre o marca, o escríbenos por WhatsApp.</div>
+  </section>
+
+  <section id="novedades" class="wrap" hidden>
+    <div class="heading"><h2>Novedades</h2><p>Las últimas fragancias que llegaron al catálogo.</p></div>
+    <div class="grid" id="newGrid"></div>
+    <button class="btn more" data-go="nuevo" type="button">Ver todas las novedades</button>
+  </section>
+
+  <section id="buscador" class="wrap">
+    <div class="heading"><h2>Descubre tu aroma</h2><p>Cuéntanos qué te gusta y te sugerimos fragancias del catálogo.</p></div>
+    <div class="quiz">
+      <div class="qg"><h4>¿Qué aroma prefieres?</h4><div class="opts" data-q="aroma"><button data-v="D">Dulce</button><button data-v="F">Fresco</button><button data-v="R">Frutal</button><button data-v="L">Floral</button><button data-v="I">Intenso</button></div></div>
+      <div class="qg"><h4>¿Para quién es?</h4><div class="opts" data-q="para"><button data-v="m">Para él</button><button data-v="f">Para ella</button><button data-v="x" class="on">Me da igual</button></div></div>
+      <div class="qg"><h4>¿Cuándo lo usarás?</h4><div class="opts" data-q="momento"><button data-v="d">De día</button><button data-v="n">De noche</button><button data-v="x" class="on">Siempre</button></div></div>
+      <div class="qg"><h4>¿Cuál es tu presupuesto?</h4><div class="opts" data-q="presu"><button data-v="0" class="on">Cualquiera</button><button data-v="150">Hasta RD$150</button><button data-v="350">Hasta RD$350</button><button data-v="500">Hasta RD$500</button><button data-v="800">Hasta RD$800</button><button data-v="1200">Hasta RD$1,200</button></div></div>
+      <div><button class="btn gold" id="quizGo" type="button">Ver recomendaciones</button></div>
+      <p class="note" id="quizMsg" aria-live="polite"></p>
+    </div>
+    <div class="grid" id="quizOut" style="margin-top:14px"></div>
+  </section>
+
+  <section id="por-que" class="wrap">
+    <div class="heading"><h2>Por qué Aromas Art</h2></div>
+    <div class="feat">
+      <div class="box"><h3>Un catálogo amplio</h3><p id="whyCount"></p></div>
+      <div class="box"><h3>Tamaños para cada ocasión</h3><p>Desde 10 ml para probar hasta 100 ml para tu perfume de siempre.</p></div>
+      <div class="box"><h3>Pedido sencillo</h3><p>Armas tu carrito en la página y nos envías el resumen por WhatsApp.</p></div>
+    </div>
+  </section>
+
+  <section id="como-comprar" class="wrap">
+    <div class="heading"><h2>Cómo comprar</h2></div>
+    <ol class="steps">
+      <li>Elige tu fragancia y el tamaño que prefieras.</li>
+      <li>Agrégala al carrito y revisa cantidades y total.</li>
+      <li>Pulsa «Revisar pedido» y confirma tus datos de contacto.</li>
+      <li>Se abre WhatsApp con tu pedido listo. Nosotros confirmamos disponibilidad y coordinamos contigo.</li>
+    </ol>
+  </section>
+
+  <section id="confianza" class="wrap">
+    <div class="heading"><h2>Compra con confianza</h2><p>Esto es lo que debes saber antes de pedir.</p></div>
+    <div class="feat" id="trust"></div>
+  </section>
+
+  <section id="faq" class="wrap">
+    <div class="heading"><h2>Preguntas frecuentes</h2></div>
+    <details><summary>¿Son perfumes originales de las marcas?</summary><p>No. Son fragancias de inspiración. Las marcas que ves en el catálogo se mencionan solo como referencia olfativa y pertenecen a sus dueños.</p></details>
+    <details><summary>¿Cómo sé si el perfume está disponible?</summary><p>Al recibir tu pedido por WhatsApp confirmamos la disponibilidad antes de cerrar la compra.</p></details>
+    <details><summary>¿Qué tamaños y precios hay?</summary><p id="faqSizes"></p></details>
+    <details><summary>¿Cómo pago y cómo recibo mi pedido?</summary><p>El pago y la entrega los coordinamos contigo por WhatsApp al confirmar tu pedido.</p></details>
+    <details><summary>¿Qué datos guarda la página?</summary><p>Tu carrito y, si lo decides, tus datos de contacto. Todo queda solo en tu navegador. Puedes borrarlos cuando quieras.</p></details>
+  </section>
+
+  <section id="contacto" class="wrap">
+    <div class="contact">
+      <div><h3>¿Dudas sobre un perfume o tu pedido?</h3><p>Escríbenos y te ayudamos a elegir el tamaño y la fragancia.</p><p><b style="color:var(--gold)">Ubicación:</b> Santiago, República Dominicana · <b style="color:var(--gold)">WhatsApp:</b> +1 (809) 268-2861</p></div>
+      <a class="btn gold" id="waContact" href="#contacto" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<a class="wa" id="waFloat" href="#contacto" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.300 1.200-1.800 1.200-.5.1-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800 0-1.300.7-2 1-2.300.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.800-.1 1.400Z"/></svg><span>WhatsApp</span></a>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="cartDlg" aria-labelledby="cdT">
+  <div class="dh"><h3 id="cdT">Tu carrito</h3><button class="x" id="cartClose" type="button" aria-label="Cerrar carrito">×</button></div>
+  <div id="cartItems"></div>
+  <div class="tot"><span>Total</span><b id="total">RD$0</b></div>
+  <div class="row"><button class="btn sm" id="clearCart" type="button">Vaciar carrito</button><button class="btn gold sm" id="checkout" type="button">Revisar pedido</button></div>
+  <p class="note" style="margin-top:10px">Al confirmar se abrirá WhatsApp con tu pedido. El pedido no queda confirmado hasta que te respondamos.</p>
+  <div class="dsec">
+    <h4>Tus datos de contacto</h4>
+    <p id="accountStatus" class="note" aria-live="polite"></p>
+    <form id="accountForm" class="form" novalidate>
+      <div><label for="customerName">Nombre</label><input id="customerName" maxlength="80" autocomplete="name"><p class="err" id="eName" role="alert"></p></div>
+      <div><label for="customerPhone">Teléfono o WhatsApp</label><input id="customerPhone" type="tel" maxlength="25" autocomplete="tel"><p class="err" id="ePhone" role="alert"></p></div>
+      <div><label for="customerEmail">Correo (opcional)</label><input id="customerEmail" type="email" maxlength="120" autocomplete="email"><p class="err" id="eMail" role="alert"></p></div>
+      <div class="row"><button class="btn gold sm" type="submit">Guardar mis datos</button><button class="btn sm" id="deleteAccount" type="button">Borrar mis datos</button></div>
+    </form>
+    <p class="note" style="margin-top:10px">Se guardan solo en este navegador y dispositivo. No es una cuenta con contraseña ni se sincroniza. No escribas datos de tarjetas ni contraseñas.</p>
+  </div>
+</dialog>
+
+<dialog id="adm" aria-labelledby="admT">
+  <div class="dh"><h3 id="admT">Administrar ofertas</h3><button class="x" id="admClose" type="button" aria-label="Cerrar administrador">×</button></div>
+  <p class="note" id="admState" aria-live="polite"></p>
+  <div class="form admform">
+    <div><label for="aTipo">¿Qué entra en oferta?</label><select id="aTipo"><option value="perfume">Un perfume</option><option value="marca">Una marca</option><option value="categoria">Una categoría</option><option value="todo">Todo el catálogo</option></select></div>
+    <div><label for="aVal" id="aValL">Elige</label><select id="aVal"></select></div>
+    <div><label for="aPct">Descuento (%)</label><input id="aPct" type="number" min="1" max="90" inputmode="numeric"></div>
+    <div><label for="aHasta">Válida hasta (opcional)</label><input id="aHasta" type="date"></div>
+    <div class="w"><label for="aEt">Etiqueta (opcional, por ejemplo Black Friday)</label><input id="aEt" maxlength="30"></div>
+    <p class="err w" id="aErr" role="alert"></p>
+    <div class="w"><button class="btn gold sm" id="aAdd" type="button">Agregar oferta</button></div>
+  </div>
+  <div class="dsec"><h4>Ofertas actuales</h4><div id="admList"></div></div>
+  <div class="dsec"><h4>Publicar para tus clientes</h4>
+    <p class="note">Los cambios que haces aquí solo se ven en este navegador. Para que los vean tus clientes, pulsa «Descargar ofertas.json» y sube ese archivo a tu sitio, junto a aromasart.html, reemplazando el anterior.</p>
+    <textarea id="admJson" readonly rows="6" aria-label="Contenido de ofertas.json"></textarea>
+    <div class="row"><button class="btn gold sm" id="aDown" type="button">Descargar ofertas.json</button><button class="btn sm" id="aCopy" type="button">Copiar</button><button class="btn sm" id="aReset" type="button">Descartar cambios</button></div>
+  </div>
+</dialog>
+
+<dialog id="review" aria-labelledby="rvT"><h3 id="rvT">Revisa tu pedido</h3><div id="rvBody"></div><p class="note">Se abrirá WhatsApp con este resumen. Tu pedido queda confirmado cuando te respondamos.</p><div class="row"><button class="btn sm" id="rvCancel" type="button">Seguir editando</button><button class="btn gold sm" id="rvGo" type="button">Abrir WhatsApp</button></div></dialog>
+
+<footer><div class="wrap"><b>Aromas Art</b><br>Santiago, República Dominicana · WhatsApp +1 (809) 268-2861<br>Fragancias de inspiración. Las marcas mencionadas pertenecen a sus dueños y se usan solo como referencia olfativa.<details style="margin-top:14px;text-align:left"><summary>Privacidad y datos</summary><p>Esta página guarda en tu navegador (localStorage) tu carrito y, si lo decides, tu nombre, teléfono y correo, para agilizar tus pedidos. No usamos contraseñas ni procesamos pagos en la página. Los datos solo se envían cuando tú abres WhatsApp con tu pedido.</p></details></div></footer>
+
+<script>
+(function(){
+"use strict";
+/* ===== CONFIGURACIÓN DEL NEGOCIO ===== */
+const CFG={wa:"18092682861",pagos:"",entrega:"",cambios:"",pin:""}; // pin: opcional, pide un PIN antes de abrir el administrador (protección básica, no es seguridad real) // WhatsApp internacional sin +. Completa pagos/entrega/cambios solo con condiciones reales.
+const sizes=[{ml:10,price:150},{ml:15,price:350},{ml:20,price:500},{ml:30,price:800},{ml:50,price:1200},{ml:100,price:1700}]; // único lugar donde se editan precios
+const SOLD=[]; // estados tratados como agotado. En tu código original el estado 2 se mostraba como «En existencia»; si quieres que 2 sea agotado, pon [2].
+const ARAB=["LATTAFA","ARMAF","AL HAMARAIN","ORIENTICA","BHARARA","RASASI","AFNAN","AJMAL","AHLI"];
+const FAM={D:"Dulce",F:"Fresco",R:"Frutal",L:"Floral",I:"Intenso"};
+// Ofertas publicadas de respaldo. Normalmente se leen de ofertas.json (junto a este archivo). Formato: {tipo:"perfume|marca|categoria|todo", valor:"m-006 | PACO RABANNE | m,f,ar,nuevo", pct:15, hasta:"2026-12-31", etiqueta:"Black Friday"}
+const OFERTAS=[];
+
+/* ===== CATÁLOGO (nombre|marca|estado: 1 nuevo, 2 en existencia). ID = m-001… / f-001… ; foto = blottles/<id>.jpg ===== */
+const M=`POLO BLUE|RALPH LAUREN|2
+POLO RED|RALPH LAUREN|2
+360 RED|PERRY ELLIS
+INVICTUS|PACO RABANNE
+PHANTOM|PACO RABANNE
+1 MILLION|PACO RABANNE
+1 MILLION ELIXIR|PACO RABANNE|2
+1 MILLION PRIVÉ|PACO RABANNE
+1 MILLION LUCKY|PACO RABANNE|2
+BLACK XS|PACO RABANNE
+BLACK XS L’EXCÉS|PACO RABANNE
+INVICTUS VICTORY|PACO RABANNE|2
+INVICTUS AQUA|PACO RABANNE
+INVICTUS INTENSE|PACO RABANNE
+INVICTUS ONIX|PACO RABANNE
+NAUTICA VOYAGE|NAUTICA
+TOY BOY|MOSCHINO
+EXPLORER|MONTBLANC|2
+LEGEND|MONTBLANC|2
+LEGEND NIGHT|MONTBLANC
+SWISS ARMY|VICTORINOX
+EROS|VERSACE|2
+EROS FLAME|VERSACE
+DYLAN BLUE|VERSACE
+POUR HOMME|VERSACE
+STARWALKER|MONTBLANC
+LACOSTE BLANC|LACOSTE|2
+LACOSTE ESSENTIAL|LACOSTE
+LACOSTE MAGNETIC|LACOSTE
+SCANDAL|JEAN PAUL GAULTIER|2
+ULTRA MALE|JEAN PAUL GAULTIER
+LE BEAU LP|JEAN PAUL GAULTIER
+LE MALE ELIXIR|JEAN PAUL GAULTIER
+L’EAU D’ISSEY|ISSEY MIYAKE
+L’EAU D’ISSEY SPORT|ISSEY MIYAKE
+BOTTLED|HUGO BOSS
+BOTTLED NIGHT|HUGO BOSS
+BOTTLED INLIMITED|HUGO BOSS
+DARK BLUE|HUGO BOSS
+ACQUA DI GIO|GIORGIO ARMANI
+ACQUA DI GIO PROFUMO|GIORGIO ARMANI
+POUR HOMME|DOLCE & GABBANA
+K|DOLCE & GABBANA
+LIGHT BLUE|DOLCE & GABBANA
+STRONGER WITH YOU|EMPORIO ARMANI
+SWY LEATHER|EMPORIO ARMANI
+BAD|DIESEL
+PLUS PLUS|DIESEL
+FUEL FOR LIFE|DIESEL
+BLEU DE CHANEL|CHANEL|2
+EAU DE CARTIER|CARTIER
+DECLARATION|CARTIER|2
+212 MEN|CAROLINA HERRERA
+212 HEROES|CAROLINA HERRERA
+212 SEXY MEN|CAROLINA HERRERA
+212 VIP MEN|CAROLINA HERRERA
+212 VIP BLACK|CAROLINA HERRERA
+BAD BOY|CAROLINA HERRERA
+BB DAZZLING GARDEN|CAROLINA HERRERA
+ONE SHOCK FOR HIM|CALVIN KLEIN
+VELVET GOLD|ORIENTICA
+MAN IN BLACK|BVLGARI
+MAN EXTREME|BVLGARI
+MAN WOOD ESSENCE|BVLGARI
+AZZARO POUR HOMME|AZZARO
+BLUE SEDUCTION|ANTONIO BANDERAS
+GOLD EDITION|AL HAMARAIN
+AMBER ROUGE|ORIENTICA
+OUD SAFRON|ORIENTICA
+ROYAL AMBER|ORIENTICA
+OUD FOR GLORY|LATTAFA
+OUD SUBLIME|LATTAFA
+OUD AMETHYST|LATTAFA
+HONOR & GLORY|LATTAFA|2
+QAAE’D|LATTAFA
+LAIL MALEKI|LATTAFA|2
+CLUB DE NUIT INTENSE|ARMAF
+BHARARA KING|BHARARA
+ASAD|LATTAFA
+KHAMRAH|LATTAFA
+BLEECKER STREET|BOND No 9
+SIGNATURE|BOND No 9
+SCENT OF PEACE|BOND No 9
+MILLÉSIME IMPERIAL|CREED
+SILVER MOUNTAIN WATER|CREED
+AVENTUS|CREED
+BACCARAT ROUGE 540|MAISON FRANCIS KURKDJIAN
+IL KAKUNO|ILMIN
+SANTAL 33|LE LABO|2
+L’IMMENSITÉ|LOUIS VUITTON
+OMBRE NOMADE|LOUIS VUITTON
+IMAGINATION|LOUIS VUITTON
+CEDRAT BOISE|MANCERA
+RED TOBACCO|MANCERA
+ARABIANS MONTALE|MONTALE
+ARABIANS TONKA|MONTALE
+HEROD|PARFUMS DE MARLY|2
+VALENTINO UOMO|VALENTINO
+Y|YVES SAINT LAURENT
+GREEN IRISH TWEED|CREED
+HALLOWEEN MAN|JESUS DEL POZO
+THE SCENT|HUGO BOSS
+EMBLEM|MONTBLANC
+GREENWICH VILLAGE|BOND No 9|2
+SAUVAGE ELIXIR|DIOR
+LAFAYETTE|BOND No 9
+NAXOS|XERJOFF
+NEW YORK NIGHTS|BOND No 9
+ORIGINAL SANTAL|CREED
+SAUVAGE|DIOR
+LEGEND RED|MONTBLANC|2
+ACQUA DI GIO PROFONDO|GIORGIO ARMANI|2
+TRIBECA|BOND No 9
+HIMALAYA|CREED
+OMBRE LEATHER|TOM FORD|2
+ALLURE HOMME SPORT|CHANEL|2
+PEGASUS|PARFUMS DE MARLY
+ETERNITY FOR MEN|CALVIN KLEIN
+INVICTUS VIC ELIXIR|PACO RABANNE|2
+MANDARIN SKY|ARMAF|2
+ASAD ZANZIBAR|LATTAFA
+FAHRENHEIT|CALVIN KLEIN
+ROLLING IN LOVE|KILIAN
+GUILTY POUR HOMME|GUCCI
+9 PM|AFNAN
+CACTUS GARDEN|LOUIS VUITTON
+MEGAMAN|ARMAF
+ANGEL|MUGLER
+SMOKING HOT|KILIAN|2
+YSL POUR HOMME|YVES SAINT LAURENT|2
+BLUE LABEL|GIVENCHY
+NICHE|BHARARA
+NO LIMITS|PHILIPP PLEIN
+LAYTON|PARFUMS DE MARLY
+VIKING|CREED
+EROS ENERGY|VERSACE|2
+AJWAD|LATTAFA
+IMPACT|TOMMY HILFIGER
+PACIFIC CHILL|LOUIS VUITTON|2
+KHAMRAH QAHWA|LATTAFA
+POUR HOMME INTENSO|DOLCE & GABBANA
+ATTIMO POUR HOMME|SALVATORE FERRAGAMO
+LIONHEART|ARMAF
+LACOSTE RED|LACOSTE
+9 PM REBEL|AFNAN
+CK IN2U|CALVIN KLEIN
+CODE|GIORGIO ARMANI|2
+VANILLA OUD|KAYALI
+ASAD BOURBON|LATTAFA
+BORN IN ROMA UOMO|VALENTINO|2
+CH MEN|CAROLINA HERRERA
+ALTHAIR|PARFUMS DE MARLY
+ERBA PURA|XERJOFF
+TOBACCO VANILLE|TOM FORD|2
+LOST CHERRY|TOM FORD|2
+BAD BOY COBALT|CAROLINA HERRERA
+TONY LOMMI|XERJOFF
+TORINO 21|XERJOFF
+OUD WOOD|TOM FORD
+COSTA AZURRA ACQUA|TOM FORD
+ANOTHER 13|LE LABO
+THE ONE FOR MEN|DOLCE & GABBANA
+ORANGE MARMALADE|JO MALONE
+ELYSIUM POUR HOMME|ROJA PARFUMS
+ALEXANDRIA II|XERJOFF
+WESTSIDE|BOND No 9
+THE MOST WANTED|AZZARO
+GAME OF SPADES KING|JO MILANO
+GAME OF SPADES ROYALE|JO MILANO
+GAME OF SPADES WILDCARD|JO MILANO
+AMBER OUD AQUA DUBAI|AL HAMARAIN
+HAWAS ICE FOR HIM|RASASI
+BIANCO LATTE|GIARDINI DI TOSCANA
+OPERA|SOSPIRO
+ANGEL SHARE|KILIAN
+HIGH FREQUENCY|INITIO PARFUMS
+MUSK THERAPY|INITIO PARFUMS
+KING SOLEIL|BHARARA
+UOMO BIR INTENSE|VALENTINO
+ODYSSEY BAHAMAS|ARMAF
+SUMMER HAMMER|LORENZO PAZZAGLIA
+HONEY AOUD|MONTALE
+ODISSEY ARTISTO|ARMAF
+BLUE TALISMAN|EX NIHILO
+DARK VANILLA|MONTALE
+NEW YORK AMBER|BOND No 9
+NOMAD|BOND No 9
+ASAD ELIXIR|LATTAFA
+POLO SPORT|RALPH LAUREN|1
+ARSENAL|GILLES CANTUEL|1
+COOL WATER|DAVIDOFF|1
+PURE XS|PACO RABANNE|1
+SHAHEEN GOLD|LATTAFA|1
+PINEAPPLE|DOLCE & GABBANA|1
+CHOCOLATE GREEDY|MONTALE|1
+BHARARA ONIX|BHARARA|1
+LACOSTE NOIR|LACOSTE|1
+ODISSEY GO MANGO|ARMAF|1
+PARIS HILTON FOR MEN|PARIS HILTON|1
+IL ORGASME|ILMIN|1
+TERRE D’HERMÉS|HERMÈS|1
+TYGAR|BVLGARI|1
+ART OF UNIVERSE|LATTAFA|1
+SPACEBOMB|VIKTOR & ROLF|1
+BIR UOMO EXTRADOCE|VALENTINO|1
+PI|GIVENCHY|1
+BAL D AFRIQUE|BYREDO|1
+KHAMRAH DUKHAN|LATTAFA|1
+LEGEND SPIRIT|MONTBLANC|1
+KARPOS|AHLI|1`;
+const F=`FANTASY|BRITNEY SPEARS
+FANTASY IN BLOOM|BRITNEY SPEARS
+BURBERRY HER|BURBERRY
+OMNIA CORAL|BVLGARI
+SECRET OBSESSION|CALVIN KLEIN
+212 SEXY|CAROLINA HERRERA
+212 VIP ROSÉ|CAROLINA HERRERA
+212 VIP WILD PARTY|CAROLINA HERRERA
+GOOD GIRL|CAROLINA HERRERA
+GOOD GIRL SUPREME|CAROLINA HERRERA
+CLASSIQUE|JEAN PAUL GAULTIER
+COCO MADEMOISELLE|CHANEL
+CHANCE|CHANEL
+GOOD GIRL BLUSH|CAROLINA HERRERA
+LIGHT BLUE|DOLCE & GABBANA
+GUESS GOLD|GUESS
+HUGO XX|HUGO BOSS
+SCANDAL|JEAN PAUL GAULTIER
+BOSS WOMAN|HUGO BOSS
+MEOW|KATY PERRY
+TOUCH OF PINK|LACOSTE
+LA VIE EST BELLE|LANCÔME
+LEGEND POUR FEMME|MONTBLANC|2
+MOSCHINO FUNNY|MOSCHINO
+TOY 2 BUBBLE GUM|MOSCHINO
+5TH AVENUE|ELIZABETH ARDEN
+LADY MILLION|PACO RABANNE
+LADY MILLION LUCKY|PACO RABANNE
+LACOSTE MAGNETIC|LACOSTE
+SCANDAL|JEAN PAUL GAULTIER
+DAZZLE|PARIS HILTON
+HEIRESS|PARIS HILTON
+360|PERRY ELLIS
+L’EAU D’ISSEY|ISSEY MIYAKE
+YARA|LATTAFA
+NOBLE BLUSH|LATTAFA
+SONG OF OUD|AJMAL
+DELINA|PARFUMS DE MARLY
+ITALICA|XERJOFF
+BRIGHT CRYSTAL|VERSACE
+CLOUD|ARIANNA GRANDE
+YARA CANDY|LATTAFA
+COCO EAU DE PARFUM|CHANEL
+PINK PRETTY AND PURE|VICTORIA’S SECRET
+BOMBSHELL|VICTORIA’S SECRET
+COCONUT PASSION|VICTORIA’S SECRET
+VANILLA LACE|VICTORIA’S SECRET
+PEAR GLACÉ|VICTORIA’S SECRET
+PURE SEDUCTION|VICTORIA’S SECRET
+DONNA BORN IN ROMA|VALENTINO|2
+TOMMY GIRL|TOMMY HILFIGER
+TOY 2|MOSCHINO
+CLOUD PINK|ARIANNA GRANDE
+BONBON|VIKTOR & ROLF
+CH BEAUTIES|CAROLINA HERRERA
+VERY GOOD GIRL|CAROLINA HERRERA|2
+CHEIROSA 62|SOL DE JANEIRO
+CHEIROSA 87|SOL DE JANEIRO
+CHEIROSA 40|SOL DE JANEIRO|2
+CHEIROSA 71|SOL DE JANEIRO
+CHEIROSA 59|SOL DE JANEIRO
+CHEIROSA 68|SOL DE JANEIRO
+ISLAND BLISS|ARMAF
+FAME|PACO RABANNE
+OMNIA CRYSTALLINE|BVLGARI
+ETERNITY|CALVIN KLEIN
+THE ONE|DOLCE & GABBANA
+EUPHORIA|CALVIN KLEIN
+INCANTO CHARMS|SALVATORE FERRAGAMO
+YUM YUM|ARMAF|2
+HALLOWEEN|JESUS DEL POZO
+MAYAR|LATTAFA
+MISS DIOR|DIOR
+ELYSIUM POUR FEMME|ROJA PARFUMS
+SI|GIORGIO ARMANI
+ANGE OU DÉMON|GIVENCHY
+J’ADORE|DIOR
+MY WAY|GIORGIO ARMANI
+OLYMPEA|PACO RABANNE
+CHANEL No 5|CHANEL
+DYLAN BLUE FEMME|VERSACE
+ACQUA DI GIOIA|GIORGIO ARMANI
+L’IMPERATRICE|DOLCE & GABBANA
+YARA MOI|LATTAFA
+CANDI ROSE|MONTALE
+PRADA CANDY|PRADA
+L’EAU D’ISSEY|ISSEY MIYAKE
+YELLOW DIAMOND|VERSACE
+TOY 2 PEARL|MOSCHINO
+DIVINE|JEAN PAUL GAULTIER
+YARA TOUS|LATTAFA
+RALPH|RALPH LAUREN
+EROS POUR FEMME|VERSACE
+FLOWER BY KENZO|KENZO
+ULTRAVIOLET|PACO RABANNE
+SCANDALOUS|VICTORIA’S SECRET
+SIGNATURE FOR HER|DAVID BECKHAM
+GOOD GIRL LÉGERE|CAROLINA HERRERA
+ECLAIRE|LATTAFA
+B.I.R DONNA EXTRADOCE|VALENTINO|2
+LA BOMBA|CAROLINA HERRERA|2
+HAPPY|CLINIQUE
+POISON|DIOR
+LOVE SPELL|VICTORIA’S SECRET
+AMARIGE|GIVENCHY
+GUCCI GUILTY|GUCCI
+BIR DONNA YELLOW|VALENTINO
+ANGEL|MUGLER
+LOLITA|LOLITA LEMPICKA
+BLACK OPIUM|YVES SAINT LAURENT
+VANILLA SKIN|PLHUR
+VANILLA SUEDE|ARIANNA GRANDE
+WESTSIDE|BOND No 9
+ODISSEY MARSHMALLOW|ARMAF
+ECLAIRE PISTACHE|LATTAFA
+NOLITA|BOND No 9
+BERRY ON TOP|LATTAFA
+COOKIE CRAVE|LATTAFA
+AMBER ROMANCE|VICTORIA’S SECRET|1
+9 PM POUR FEMME|LATTAFA|1
+AHLI CARVUS|AHLI|1
+VANILLA FREAK|LATTAFA|1
+BHARARA ROSE|BHARARA|1
+AHLI VEGA|AHLI|1
+IL FEMME|ILMIN|1
+DANIA|ORIENTICA|1
+ODISSEY CANDEE|ARMAF|1
+THANK U NEXT|ARIANNA GRANDE|1`;
+// Notas de salida y familias, en el mismo orden del catálogo (masculinos y luego femeninos)
+const N=["melón, pepino, mandarina","pomelo, arándano, limón","","toronja, notas marinas, mandarina","","toronja, menta, mandarina","","","","","","","","","","manzana verde, hojas verdes, loto","","bergamota, pimienta rosa","piña, bergamota, lavanda","","","menta, manzana verde, limón","mandarina, limón, pimienta negra","bergamota, toronja, hoja de higo","limón, bergamota, neroli","","toronja, cardamomo, romero","","","","pera, menta, bergamota","","","yuzu, limón, mandarina","","manzana, bergamota, limón","","","","bergamota, limón, mandarina","","limón, bergamota, neroli","","toronja, bergamota, enebro","cardamomo, pimienta rosa, violeta","","","","","toronja, limón, menta","","","","","","","","","","","","","","","","","","","","","","","","","","","limón, piña, bergamota","","","canela, nuez moscada, bergamota","","","","","","piña, bergamota, manzana","azafrán, jazmín","","cardamomo, iris, violeta","","","","","","","","","","manzana, jengibre, bergamota","","","","","","toronja, canela, nuez moscada","","","","","bergamota, pimienta","","","","","","","","lavanda, mandarina, bergamota","","","","lavanda, mandarina, limón","","limón, lavanda","","","","","","","","","","manzana, lavanda, bergamota","","","","","","","","","","","","","","","","","","","","hoja de tabaco, especias","cereza negra, almendra amarga","","","","palisandro, cardamomo, pimienta","","","toronja, cilantro, albahaca","","","","","","","","","","","","","","","","","","","","","","","","","","","","","menta, lavanda","","","","","","","","","","","","","","","","","","","","lichi, kiwi, membrillo","","","","","","","","almendra, café, bergamota","","","naranja, mandarina, bergamota","","","limón siciliano, manzana, cedro","","","naranja sanguina, mandarina","","","","grosella negra, pera","","","","","frambuesa, neroli, mandarina","","","naranja sanguina, mandarina","","","","loto, ciclamen, fresia","orquídea, heliotropo, mandarina","","","lichi, ruibarbo, bergamota","","yuzu, granada, champán","lavanda, pera, bergamota","","","","fruta de la pasión, toronja, mandarina","","","","","bergamota, pimienta rosa","","","","","","","","","","","","","","","","","","","","","","","","","grosella negra, mandarina, bergamota","","pera, melón, bergamota","bergamota, flor de naranjo","mandarina, flor de jengibre","aldehídos, neroli, bergamota","","","","","","","loto, ciclamen, fresia","","","","","","","","","","","","","","","","","","","","","","","pera, pimienta rosa, flor de naranjo","","","","","","","","","","","","","","","","","",""];
+const A=["FFF","FRI","FFF","FFF","FD-","IIF","D-L","IID","ID-","DIF","FII","DI-","FIF","IF-","FIF","F-L","LLI","IFF","RDF","FID","FFF","DFF","FFD","IFF","FFF","IFF","IFF","FFF","IFF","RFD","DRF","DI-","DDR","FFF","FFI","IRD","IL-","FRD","FIF","FFF","FFF","FFF","FFI","FFF","D--","D--","FI-","IFF","RDF","FIF","F-F","FFF","FFF","FFR","DI-","FFL","FDI","IFI","IIF","III","---","II-","FFI","IFF","FIF","FRF","DRF","III","II-","DR-","IIF","RF-","LII","DI-","I-I","LDR","FR-","FR-","IFI","DID","RIF","-LI","FIR","FFL","FFR","R-I","III","II-","I--","FFF","III","FFF","IFR","III","FII","DDI","IDI","I-I","FFI","FF-","FIF","FF-","IFF","FLR","IFF","ID-","DRD","RII","FIF","FIF","FIF","FFF","IIR","FI-","-II","FFD","-D-","FFF","DII","F--","D--","IFF","D-L","F-I","DI-","FFF","FFF","IDR","IR-","FFI","FFF","I","I-I","IFI","FFF","FFF","LRD","IFI","FFF","IDD","FFF","IFF","DFD","IRF","RDI","FFI","-F-","DDI","DID","FIF","-DD","DDI","FRD","DDI","--L","FIR","IID","FFF","III","FIF","-II","IFI","FFI","FFI","II-","LL-","DIF","FD-","I-I","IDL","FFF","RFF","DD-","I-F","IID","L--","F-L","FR-","-DF","FFR","RDR","RII","DI-","FR-","IDI","IFI","RLI","II-","FFF","IFF","FFF","DDI","DRD","DRF","DII","IFD","IFF","RDR","RFF","D-F","FIF","F-I","FRF","II-","-II","DI-","IFI","I--","FF-","RRD","DRR","RLF","RDI","LIF","IFL","D--","L--","DRF","DLI","LDR","LD-","FID","-F-","LDF","FIF","IRL","RLI","RDL","LIR","DLR","F--","DD-","LFF","FFF","RDL","LLF","LDR","IDR","RDL","RDL","DRD","RDD","LLF","RF-","DD-","D--","I--","LLR","D-D","LFF","DL","DR-","II-","LDF","RDF","D--","D--","RFF","RL-","IDR","FLL","RLF","DR-","RDF","FLR","RLF","DRD","-DD","RDD","DRD","D-L","RRL","D-D","RDR","IL-","LLF","RL-","IL-","LRR","R-I","L-F","RL-","-DL","L-F","IDF","DDI","LLR","LF-","DLI","-IL","RLF","FFF","LFR","ILD","RLF","R-I","LFF","FLF","FFI","LDF","RDD","LRF","FLI","-LL","L-I","DRL","-LD","DLI","DD-","DR-","LR-","FLL","RDI","RLF","L-F","LI-","-FL","DD-","ID-","DID","DDI","LD-","LL-","DRD","DDL","LLF","DRD","DD-","DDI","IRL","RDI","DDL","LRD","RL-","I--","DLI","RDD","DL-"];
+
+/* ===== UTILIDADES ===== */
+const $=id=>document.getElementById(id);
+const money=n=>"RD$"+n.toLocaleString("es-DO");
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[’'´`]/g,"");
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const clean=s=>String(s||"").replace(/[\u0000-\u001f\u007f]/g," ").trim();
+function lev(a,b){const m=a.length,n=b.length;let p=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+const parse=(txt,cat)=>txt.split("\n").map((l,i)=>{const r=l.split("|");return{id:cat+"-"+String(i+1).padStart(3,"0"),name:r[0],brand:r[1],cat,st:+r[2]||0}});
+const perfumes=[...parse(M,"m"),...parse(F,"f")].map((p,i)=>{const fam=A[i]||"";p.pos=i;p.notes=N[i]||"";p.fam=fam;p.fams=[...new Set([...fam].filter(c=>FAM[c]))];p.key=norm(p.name+" "+p.brand);p.words=p.key.split(/\s+/);p.arab=ARAB.includes(p.brand);return p});
+const byId=Object.fromEntries(perfumes.map(p=>[p.id,p]));
+const avail=p=>!SOLD.includes(p.st);
+const waUrl=t=>"https://wa.me/"+CFG.wa+(t?"?text="+encodeURIComponent(t):"");
+
+/* ===== OFERTAS ===== */
+const ofertaOk=o=>o&&["perfume","marca","categoria","todo"].includes(o.tipo)&&Number.isFinite(+o.pct)&&+o.pct>=1&&+o.pct<=90&&(o.tipo==="todo"||(typeof o.valor==="string"&&o.valor))&&(!o.hasta||/^\d{4}-\d{2}-\d{2}$/.test(o.hasta));
+const cleanOffers=a=>Array.isArray(a)?a.filter(ofertaOk).map(o=>({tipo:o.tipo,valor:o.tipo==="todo"?"":String(o.valor).slice(0,80),pct:Math.round(+o.pct),hasta:o.hasta||"",etiqueta:String(o.etiqueta||"").slice(0,30)})):[];
+let published=cleanOffers(OFERTAS),draft=null;
+try{const d=JSON.parse(localStorage.getItem("aromasArtOffersDraft")||"null");if(Array.isArray(d))draft=cleanOffers(d)}catch(_){}
+const offers=()=>draft||published;
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const live=o=>!o.hasta||o.hasta>=today();
+const matchOffer=(o,p)=>o.tipo==="todo"||(o.tipo==="perfume"&&o.valor===p.id)||(o.tipo==="marca"&&o.valor===p.brand)||(o.tipo==="categoria"&&(o.valor==="ar"?p.arab:o.valor==="nuevo"?p.st===1:o.valor===p.cat));
+function offerFor(p){let b=null;offers().forEach(o=>{if(live(o)&&matchOffer(o,p)&&(!b||o.pct>b.pct))b=o});return b}
+const priceFor=(p,ml)=>{const o=offerFor(p),b=priceOf(ml);return o?Math.round(b*(1-o.pct/100)):b};
+
+
+/* ===== TARJETA ===== */
+function card(p,o){
+  o=o||{};const n=esc(p.name),ok=avail(p),off=offerFor(p);
+  const tag=(!ok?'<span class="tag out">Agotado</span>':p.st===1?'<span class="tag new">Nuevo</span>':p.st===2?'<span class="tag stock">En existencia</span>':"")+(off&&ok?'<span class="tag off">-'+off.pct+'%</span>':"");
+  const opts=sizes.map(s=>({s,np:off?Math.round(s.price*(1-off.pct/100)):s.price})).filter(x=>!o.max||x.np<=o.max).map(x=>`<option value="${x.s.ml}">${x.s.ml} ml — ${money(x.np)}${off?" (antes "+money(x.s.price)+")":""}</option>`).join("");
+  return `<article class="card"><div class="img">${tag}<img src="blottles/${p.id}.jpg" width="300" height="300" loading="lazy" decoding="async" alt="${n}, referencia ${esc(p.brand)}"><div class="fb">Aromas Art<small>${n}</small></div></div>
+<div class="cat ${p.cat}">${p.cat==="f"?"Femenino":"Masculino"}</div><h3>${n}</h3><p class="brand-name">Referencia: ${esc(p.brand)}</p>
+${off&&ok?`<p class="deal">${esc(off.etiqueta||"Oferta")}${off.hasta?" · hasta "+esc(off.hasta.split("-").reverse().join("/")):""}</p>`:""}${p.fams.length?`<p class="fam">Familia: ${p.fams.slice(0,2).map(c=>FAM[c]).join(" · ")}</p>`:""}${p.notes?`<p class="notes"><b>Salida:</b> ${esc(p.notes)}</p>`:""}${o.why?`<p class="why">${esc(o.why)}</p>`:""}
+<div class="pr"><select class="size" aria-label="Tamaño de ${n}">${opts}</select></div>
+<button class="add" type="button" data-add="${p.id}"${ok?"":" disabled"}>${ok?"Agregar al carrito":"Agotado"}</button></article>`;
+}
+document.addEventListener("error",e=>{const t=e.target;if(t&&t.tagName==="IMG"&&t.nextElementSibling){t.hidden=true;t.nextElementSibling.style.display="flex"}},true);
+
+/* ===== CATÁLOGO ===== */
+const PAGE=48;let category="todos",shown=PAGE;
+const grid=$("grid"),search=$("search"),sort=$("sort"),brandSel=$("brand"),famSel=$("famsel");
+[...new Set(perfumes.map(p=>p.brand))].sort((a,b)=>a.localeCompare(b)).forEach(b=>brandSel.add(new Option(b,b)));
+function matches(p,toks){return toks.every(t=>p.key.includes(t)||(t.length>3&&p.words.some(w=>lev(t,w)<=(t.length>6?2:1)||lev(t,w.slice(0,t.length))<=1)))}
+function filtered(){
+  const toks=norm(search.value).split(/\s+/).filter(Boolean);
+  let l=perfumes.filter(p=>(category==="todos"||(category==="oferta"?!!offerFor(p):category==="nuevo"?p.st===1:category==="ar"?p.arab:p.cat===category))&&(!brandSel.value||p.brand===brandSel.value)&&(!famSel.value||p.fam[0]===famSel.value)&&matches(p,toks));
+  if(sort.value==="az")l.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(sort.value==="za")l.sort((a,b)=>b.name.localeCompare(a.name));
+  else if(sort.value==="new")l.sort((a,b)=>(b.st===1)-(a.st===1)||a.pos-b.pos);
+  return l;
+}
+function render(){
+  const l=filtered();$("counter").textContent=l.length+(l.length===1?" perfume":" perfumes");
+  $("empty").hidden=l.length>0;grid.innerHTML=l.slice(0,shown).map(p=>card(p)).join("");$("more").hidden=l.length<=shown;
+}
+const reset=()=>{shown=PAGE;render()};
+function setCat(v){category=v;document.querySelectorAll("[data-cat]").forEach(b=>b.classList.toggle("on",b.dataset.cat===v));reset()}
+document.querySelectorAll("[data-cat]").forEach(b=>b.addEventListener("click",()=>setCat(b.dataset.cat)));
+$("more").addEventListener("click",()=>{shown+=PAGE;render()});
+let tm;search.addEventListener("input",()=>{clearTimeout(tm);tm=setTimeout(reset,120)});
+[sort,brandSel,famSel].forEach(x=>x.addEventListener("change",reset));
+$("searchGo").addEventListener("click",()=>setTimeout(()=>search.focus({preventScroll:true}),400));
+
+/* ===== TOAST ===== */
+let tt;function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),1800)}
+
+/* ===== CARRITO (panel lateral) ===== */
+const cdlg=$("cartDlg");
+function openCart(){if(cdlg.showModal){if(!cdlg.open)cdlg.showModal()}else cdlg.setAttribute("open","")}
+function closeCart(){if(cdlg.open)cdlg.close()}
+let cart=[];const priceOf=ml=>(sizes.find(s=>s.ml===ml)||{}).price||0;
+const cnt=()=>cart.reduce((n,x)=>n+x.qty,0),tot=()=>cart.reduce((n,x)=>n+priceFor(byId[x.id],x.ml)*x.qty,0);
+let lastCnt=0;
+function renderCart(){
+  const c=cnt(),badge=$("cartCount");badge.textContent=c;
+  if(c>lastCnt){badge.classList.remove("bump");void badge.offsetWidth;badge.classList.add("bump")}lastCnt=c;
+  $("cartItems").innerHTML=cart.length?cart.map((x,i)=>{const p=byId[x.id];return `<div class="ci"><div><b>${esc(p.name)}</b><br><span class="note">${esc(p.brand)} · ${x.ml} ml · ${money(priceFor(byId[x.id],x.ml))} c/u</span></div><div><b>${money(priceFor(byId[x.id],x.ml)*x.qty)}</b></div><div class="qty"><button type="button" data-act="dec" data-i="${i}" aria-label="Quitar una unidad">−</button><span aria-live="polite">${x.qty}</span><button type="button" data-act="inc" data-i="${i}" aria-label="Agregar una unidad">+</button></div><div><button class="rm" type="button" data-act="rm" data-i="${i}">Eliminar</button></div></div>`}).join(""):'<p class="note" style="padding:14px 0">Todavía no has agregado perfumes. Explora el <a href="#catalogo">catálogo</a>.</p>';
+  $("total").textContent=money(tot());
+  try{localStorage.setItem("aromasArtCart",JSON.stringify(cart))}catch(_){}
+}
+function addToCart(btn){
+  const p=byId[btn.dataset.add];if(!p||!avail(p))return;
+  const ml=Number(btn.closest(".card").querySelector(".size").value);if(!priceOf(ml))return;
+  const f=cart.find(x=>x.id===p.id&&x.ml===ml);if(f){f.qty=Math.min(99,f.qty+1)}else cart.push({id:p.id,ml,qty:1});
+  renderCart();toast("Agregado: "+p.name+" · "+ml+" ml");
+}
+try{cart=JSON.parse(localStorage.getItem("aromasArtCart")||"[]").filter(x=>x&&byId[x.id]&&avail(byId[x.id])&&priceFor(byId[x.id],x.ml)).map(x=>({id:x.id,ml:x.ml,qty:Math.max(1,Math.min(99,parseInt(x.qty)||1))}))}catch(_){cart=[]}
+$("clearCart").addEventListener("click",()=>{if(cart.length&&confirm("¿Vaciar todo el carrito?")){cart=[];renderCart()}});
+$("cartTop").addEventListener("click",openCart);
+$("cartClose").addEventListener("click",closeCart);
+cdlg.addEventListener("click",e=>{if(e.target===cdlg||e.target.closest('a[href^="#"]'))closeCart()});
+
+/* ===== DATOS DEL CLIENTE ===== */
+const pk="aromasArtCustomerProfile";
+const getPr=()=>{try{return JSON.parse(localStorage.getItem(pk)||"null")}catch(_){return null}};
+function showPr(){const pr=getPr();if(pr){$("customerName").value=pr.name||"";$("customerPhone").value=pr.phone||"";$("customerEmail").value=pr.email||"";$("accountStatus").textContent="Datos guardados en este dispositivo."}else $("accountStatus").textContent="Aún no has guardado tus datos."}
+function validate(){
+  const name=clean($("customerName").value),phone=clean($("customerPhone").value),email=clean($("customerEmail").value),d=phone.replace(/\D/g,"");
+  const e={name:name.length<2?"Escribe tu nombre.":"",phone:(d.length<7||d.length>15||!/^[\d\s()+-]+$/.test(phone))?"Escribe un teléfono válido (solo números, 7 a 15 dígitos).":"",email:email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)?"El correo no es válido.":""};
+  $("eName").textContent=e.name;$("ePhone").textContent=e.phone;$("eMail").textContent=e.email;
+  return(e.name||e.phone||e.email)?null:{name,phone,email};
+}
+$("accountForm").addEventListener("submit",e=>{e.preventDefault();const pr=validate();if(!pr)return;try{localStorage.setItem(pk,JSON.stringify(pr));$("accountStatus").textContent="Datos guardados en este dispositivo.";toast("Datos guardados")}catch(_){toast("No se pudo guardar en este navegador")}});
+$("deleteAccount").addEventListener("click",()=>{if(confirm("¿Borrar tus datos guardados en este navegador?")){try{localStorage.removeItem(pk)}catch(_){}$("accountForm").reset();["eName","ePhone","eMail"].forEach(i=>$(i).textContent="");showPr()}});
+
+/* ===== PEDIDO POR WHATSAPP ===== */
+let pending=null;const dlg=$("review");
+function checkout(){
+  if(!cart.length){toast("Tu carrito está vacío");return}
+  const pr=validate();if(!pr){toast("Completa tus datos de contacto");$("customerName").scrollIntoView({block:"center"});return}
+  const lines=cart.map(x=>`• ${byId[x.id].name} (${byId[x.id].brand}) — ${x.ml} ml × ${x.qty} = ${money(priceFor(byId[x.id],x.ml)*x.qty)}`);
+  pending=["Hola Aromas Art, quiero hacer este pedido:","",...lines,"","TOTAL: "+money(tot()),"","Nombre: "+pr.name,"Teléfono: "+pr.phone,...(pr.email?["Correo: "+pr.email]:[]),"","Por favor, confirmen disponibilidad, pago y entrega."].join("\n");
+  $("rvBody").innerHTML=cart.map(x=>`<div class="rl"><span>${esc(byId[x.id].name)} · ${x.ml} ml × ${x.qty}</span><b>${money(priceFor(byId[x.id],x.ml)*x.qty)}</b></div>`).join("")+`<div class="rl"><b>Total</b><b>${money(tot())}</b></div><div class="rl"><span>${esc(pr.name)}</span><span>${esc(pr.phone)}</span></div>`;
+  if(dlg.showModal)dlg.showModal();else sendWA();
+}
+function sendWA(){if(!pending||!cart.length)return;window.open(waUrl(pending),"_blank","noopener,noreferrer");if(dlg.open)dlg.close();closeCart();toast("WhatsApp abierto. Tu pedido se confirma cuando te respondamos.")}
+$("checkout").addEventListener("click",checkout);
+$("rvGo").addEventListener("click",sendWA);$("rvCancel").addEventListener("click",()=>dlg.close());
+
+/* ===== RECOMENDADOR ===== */
+const qs={aroma:"",para:"x",momento:"x",presu:"0"};
+document.querySelectorAll(".opts").forEach(g=>g.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;g.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));qs[g.dataset.q]=b.dataset.v}));
+$("quizGo").addEventListener("click",()=>{
+  if(!qs.aroma){$("quizMsg").textContent="Elige primero qué aroma prefieres.";return}
+  const day="FRL",night="DI",w=[3,2,1],max=Number(qs.presu),a=FAM[qs.aroma].toLowerCase();
+  const res=perfumes.filter(p=>avail(p)&&p.fam&&(qs.para==="x"||p.cat===qs.para)).map(p=>{let s=0,mo=0;[...p.fam].forEach((c,i)=>{if(c===qs.aroma)s+=w[i]*3;if(qs.momento==="d"&&day.includes(c))mo+=w[i]*.5;if(qs.momento==="n"&&night.includes(c))mo+=w[i]*.5});return{p,s:s+(s>0?mo:0),mo:s>0&&mo>0}}).filter(x=>x.s>0).sort((x,y)=>y.s-x.s||x.p.pos-y.p.pos).slice(0,6);
+  $("quizOut").innerHTML=res.map(x=>card(x.p,{max,why:(x.p.fam[0]===qs.aroma?"Su carácter principal es "+a:"Tiene toques "+a+" en su perfil")+(x.mo?" y encaja con "+(qs.momento==="d"?"el día":"la noche"):"")+"."})).join("");
+  $("quizMsg").textContent=res.length?"Estas opciones coinciden con lo que elegiste:":"No encontramos coincidencias. Prueba otra combinación o explora el catálogo.";
+  if(res.length)$("quizOut").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+/* ===== EVENTOS GLOBALES ===== */
+document.addEventListener("click",e=>{
+  const add=e.target.closest("[data-add]");if(add&&!add.disabled){addToCart(add);return}
+  const act=e.target.closest("[data-act]");
+  if(act){const i=+act.dataset.i,x=cart[i];if(!x)return;if(act.dataset.act==="inc")x.qty=Math.min(99,x.qty+1);else if(act.dataset.act==="dec")x.qty--;else x.qty=0;if(x.qty<=0)cart.splice(i,1);renderCart();return}
+  const go=e.target.closest("[data-go]");if(go){setCat(go.dataset.go);if(go.tagName==="BUTTON")$("catalogo").scrollIntoView()}
+});
+
+/* ===== SECCIONES ESTÁTICAS ===== */
+const sizeTxt=sizes.map(s=>s.ml+" ml: "+money(s.price)).join(" · ");
+$("faqSizes").textContent="Trabajamos con estos tamaños y precios: "+sizeTxt+".";
+$("whyCount").textContent="Más de "+Math.floor(perfumes.length/10)*10+" fragancias para él y para ella, con marcas de referencia conocidas.";
+$("cm").textContent=perfumes.filter(p=>p.cat==="m").length+" fragancias";$("cf").textContent=perfumes.filter(p=>p.cat==="f").length+" fragancias";$("ca").textContent=perfumes.filter(p=>p.arab).length+" fragancias";
+const trust=[["Cómo pedir","Armas tu carrito y envías el resumen por WhatsApp. Nada se cobra desde la página."],["Disponibilidad","Confirmamos la disponibilidad por WhatsApp antes de cerrar tu compra."],["Precios y tamaños","<ul>"+sizes.map(s=>`<li>${s.ml} ml: ${money(s.price)}</li>`).join("")+"</ul>Precios en pesos dominicanos."],["Pago y entrega",CFG.pagos||CFG.entrega?[CFG.pagos&&"Pagos: "+esc(CFG.pagos),CFG.entrega&&"Entrega: "+esc(CFG.entrega)].filter(Boolean).join("<br>"):"Los coordinamos contigo por WhatsApp al confirmar tu pedido."],["Fragancias de inspiración","Las marcas se mencionan solo como referencia olfativa. No son productos originales de esas marcas."]];
+if(CFG.cambios)trust.push(["Cambios y reclamaciones",esc(CFG.cambios)]);
+trust.push(["Atención","¿Dudas? Escríbenos por WhatsApp y te ayudamos."]);
+$("trust").innerHTML=trust.map(t=>`<div class="box"><h3>${t[0]}</h3><p>${t[1]}</p></div>`).join("");
+const hi=waUrl("Hola Aromas Art, quiero consultar sobre sus perfumes.");["waHero","waContact","waFloat"].forEach(i=>$(i).href=hi);
+function renderNew(){const nw=perfumes.filter(p=>p.st===1&&avail(p));$("novedades").hidden=!nw.length;$("newGrid").innerHTML=nw.slice(0,8).map(p=>card(p)).join("")}
+
+
+/* ===== ADMINISTRADOR DE OFERTAS (abrir con #admin al final de la dirección) ===== */
+function renderOffers(){
+  const l=perfumes.filter(p=>avail(p)&&offerFor(p)),has=l.length>0;
+  $("ofertas").hidden=!has;$("chipOferta").hidden=!has;$("navOfertas").hidden=!has;
+  $("offGrid").innerHTML=l.slice(0,8).map(p=>card(p)).join("");$("draftBar").hidden=!draft;
+}
+function refreshAll(){
+  renderOffers();renderNew();renderCart();
+  if(category==="oferta"&&$("chipOferta").hidden)setCat("todos");else render();
+}
+const adm=$("adm");
+const catNames={m:"Masculinos",f:"Femeninos",ar:"Árabes",nuevo:"Novedades"};
+const fmtD=s=>s?s.split("-").reverse().join("/"):"sin fecha límite";
+function targetName(o){
+  if(o.tipo==="todo")return"Todo el catálogo";
+  if(o.tipo==="perfume"){const p=byId[o.valor];return p?p.name+" ("+p.brand+")":o.valor}
+  if(o.tipo==="marca")return"Marca: "+o.valor;
+  return"Categoría: "+(catNames[o.valor]||o.valor);
+}
+function renderAdm(){
+  const l=offers();
+  $("admList").innerHTML=l.length?l.map((o,i)=>`<div class="rl"><span><b>-${o.pct}%</b> · ${esc(targetName(o))}<br><span class="note">${esc(o.etiqueta||"Oferta")} · hasta ${esc(fmtD(o.hasta))} · ${live(o)?"activa":"vencida"}</span></span><button class="rm" type="button" data-adel="${i}">Quitar</button></div>`).join(""):'<p class="note">No hay ofertas todavía.</p>';
+  $("admState").textContent=draft?"Tienes cambios sin publicar. Solo se ven en este navegador.":"Estas son las ofertas publicadas.";
+  $("admJson").value=JSON.stringify(l,null,2);
+}
+function fillVal(){
+  const t=$("aTipo").value,v=$("aVal");v.hidden=t==="todo";$("aValL").hidden=t==="todo";
+  v.innerHTML=t==="perfume"?perfumes.map(p=>`<option value="${p.id}">${esc(p.name)} · ${esc(p.brand)} (${p.cat==="f"?"F":"M"})</option>`).join(""):t==="marca"?[...new Set(perfumes.map(p=>p.brand))].sort((a,b)=>a.localeCompare(b)).map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join(""):t==="categoria"?Object.keys(catNames).map(k=>`<option value="${k}">${catNames[k]}</option>`).join(""):"";
+}
+function saveDraft(l){draft=l;try{localStorage.setItem("aromasArtOffersDraft",JSON.stringify(l))}catch(_){}refreshAll();renderAdm()}
+function openAdm(){
+  if(CFG.pin&&prompt("PIN de administrador")!==CFG.pin){toast("PIN incorrecto");return}
+  fillVal();renderAdm();if(adm.showModal)adm.showModal();
+}
+function checkHash(){if(location.hash==="#admin"){history.replaceState(null,"",location.pathname+location.search);openAdm()}}
+$("aTipo").addEventListener("change",fillVal);
+$("aAdd").addEventListener("click",()=>{
+  const t=$("aTipo").value,pct=Math.round(+$("aPct").value),hasta=$("aHasta").value,et=clean($("aEt").value).slice(0,30),val=t==="todo"?"":$("aVal").value,err=$("aErr");
+  if(!(pct>=1&&pct<=90)){err.textContent="El descuento debe ser un número entre 1 y 90.";return}
+  if(t!=="todo"&&!val){err.textContent="Elige qué entra en oferta.";return}
+  if(hasta&&hasta<today()){err.textContent="La fecha límite ya pasó. Elige una fecha de hoy en adelante.";return}
+  err.textContent="";saveDraft([...offers(),{tipo:t,valor:val,pct,hasta,etiqueta:et}]);
+  $("aPct").value="";$("aEt").value="";$("aHasta").value="";toast("Oferta agregada");
+});
+$("admList").addEventListener("click",e=>{const b=e.target.closest("[data-adel]");if(b)saveDraft(offers().filter((_,i)=>i!==+b.dataset.adel))});
+$("aReset").addEventListener("click",()=>{if(draft&&confirm("¿Descartar los cambios y volver a las ofertas publicadas?")){draft=null;try{localStorage.removeItem("aromasArtOffersDraft")}catch(_){}refreshAll();renderAdm()}});
+$("aCopy").addEventListener("click",()=>{const t=$("admJson");t.select();(navigator.clipboard?navigator.clipboard.writeText(t.value):Promise.reject()).then(()=>toast("Copiado")).catch(()=>{try{document.execCommand("copy");toast("Copiado")}catch(_){toast("Selecciona y copia el texto")}})});
+$("aDown").addEventListener("click",()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([$("admJson").value],{type:"application/json"}));a.download="ofertas.json";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
+$("admClose").addEventListener("click",()=>adm.close());
+adm.addEventListener("click",e=>{if(e.target===adm)adm.close()});
+$("draftOpen").addEventListener("click",openAdm);
+window.addEventListener("hashchange",checkHash);
+
+showPr();renderNew();renderOffers();render();renderCart();checkHash();
+fetch("ofertas.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{if(Array.isArray(j)){published=cleanOffers(j);refreshAll()}}).catch(()=>{});
+})();
+</script>
+</body>
+</html>
